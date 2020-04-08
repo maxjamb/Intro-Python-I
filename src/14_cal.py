@@ -36,11 +36,11 @@ year = x.year
 month = x.month
 monthInput = input('Enter a month to view:')
 yearInput = input('Enter a year to:')
-if (not monthInput or not yearInput):
-    print(calendar.month(year, month))
-elif (monthInput and not yearInput):
-    print(calendar.month(year, int(monthInput)))
-elif (monthInput and yearInput):
-    print(calendar.month(int(yearInput), int(monthInput)))
+if (monthInput):
+    month = int(monthInput)
+if (yearInput):
+    year = int(yearInput)
 else:
     print('please provide year and month')
+    exit()
+print(calendar.month(year, month))

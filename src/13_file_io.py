@@ -11,10 +11,9 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 
 # YOUR CODE HERE
 
-f = open("./src/foo.txt", "r")
-f1 = f.readlines()
-for txt in f1:
-    print(txt)
+with open("src/foo.txt", "r") as w:
+    print(w.read())
+
 
 # Open up a file called "bar.txt" (which doesn't exist yet) for
 # writing. Write three lines of arbitrary content to that file,
